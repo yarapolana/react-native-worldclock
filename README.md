@@ -1,7 +1,9 @@
 # React Native Worldclock
-A UI to code challenge made with react native
+
 
 ![](https://cdn.dribbble.com/users/232239/screenshots/6526312/swipe_clock_copy.gif)
+
+A UI to code challenge made with react native.
 Designs made by [Omar Faizan](https://dribbble.com/omarfaizan)
 
 # Description
