@@ -1,0 +1,4 @@
+<resources>
+  <!-- We'll use 'background' name to reference this color -->
+  <color name="background">#F7F9FC</color>
+</resources>
