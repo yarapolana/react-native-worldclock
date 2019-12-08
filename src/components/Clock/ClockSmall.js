@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components/native";
+import React, { Component } from 'react'
+import styled from 'styled-components/native'
 
-import { colors, clock } from "../../constants/global";
+import { colors, clock } from '../../constants/global'
 
 const Container = styled.View`
   background: ${colors.background};
@@ -11,9 +11,7 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   position: relative;
-  `;
-
-
+`
 
 const ClockFace = styled.View`
   background: ${colors.clockFaceSmall};
@@ -21,20 +19,20 @@ const ClockFace = styled.View`
   height: ${clock.size - 272};
   border-radius: 32px;
   position: absolute;
-`;
+`
 
 const ClockPin = styled.View`
   background: ${colors.primary};
   border-radius: 6px;
   width: 5px;
   height: 5px;
-`;
+`
 const Text = styled.Text``
 
 const ClockSmall = () => (
   <Container>
-    <ClockFace></ClockFace>
+    <ClockFace />
     <ClockPin />
   </Container>
-);
-export default ClockSmall;
+)
+export default ClockSmall

@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components/native";
+import React from 'react'
+import styled from 'styled-components/native'
 
-import { colors } from "../../constants/global";
+import { colors } from '../../constants/global'
 
 const ButtonWrap = styled.TouchableOpacity`
   background: ${props => props.bg};
@@ -13,27 +13,30 @@ const ButtonWrap = styled.TouchableOpacity`
   shadow-offset: 0 8px;
   shadow-opacity: ${props => props.so};
   shadow-radius: 12px;
-`;
+`
 
 const Image = styled.Image`
   margin: auto;
-`;
+`
 
 const Text = styled.Text`
   font-size: 18px;
   color: black;
   text-align: center;
-`;
+`
 
-const Button = props => (
-  <ButtonWrap
-    bg={props.background}
-    sc={props.shadow}
-    so={props.shadowOpacity}
-    onPress={props.onClick}
-  >
-    <Image source={props.image} />
-  </ButtonWrap>
-);
+const Button = props => {
+  const { background, shadow, shadowOpacity, onClick, image } = props
 
-export default Button;
+  return (
+    <ButtonWrap
+      bg={background}
+      sc={shadow}
+      so={shadowOpacity}
+      onPress={onClick}>
+      <Image source={image} />
+    </ButtonWrap>
+  )
+}
+
+export default Button

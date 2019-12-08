@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import styled from "styled-components/native";
-import { colors, shadow, clock } from "../../constants/global";
+import React, { Component } from 'react'
+import styled from 'styled-components/native'
+import { colors, shadow, clock } from '../../constants/global'
 
-import dots from "../../assets/images/clock-dots.png";
+import dots from '../../assets/images/clock-dots.png'
 
 const Container = styled.View`
   align-items: center;
@@ -10,7 +10,7 @@ const Container = styled.View`
   position: relative;
   width: ${clock.size};
   height: ${clock.size};
-`;
+`
 
 const ClockShadow = styled.View`
   background: ${colors.clockBackground};
@@ -22,7 +22,7 @@ const ClockShadow = styled.View`
   width: ${clock.size};
   height: ${clock.size};
   border-radius: ${clock.size / 2};
-`;
+`
 
 const ClockShadowDark = styled.View`
   background: ${colors.clockBackground};
@@ -34,7 +34,7 @@ const ClockShadowDark = styled.View`
   width: ${clock.size};
   height: ${clock.size};
   border-radius: ${clock.size / 2};
-`;
+`
 
 const ClockShadowWhite = styled.View`
   background: ${colors.clockBackground};
@@ -46,7 +46,7 @@ const ClockShadowWhite = styled.View`
   width: ${clock.size};
   height: ${clock.size};
   border-radius: ${clock.size / 2};
-`;
+`
 
 const ClockShadowColor = styled.View`
   background: ${colors.clockBackground};
@@ -59,13 +59,13 @@ const ClockShadowColor = styled.View`
   width: ${clock.size};
   height: ${clock.size};
   border-radius: ${clock.size / 2};
-`;
+`
 
 const ClockDots = styled.Image`
   width: ${clock.size - 40};
   height: ${clock.size - 40};
   position: absolute;
-`;
+`
 
 const ClockFace = styled.View`
   background: ${colors.clockFace};
@@ -77,26 +77,29 @@ const ClockFace = styled.View`
   shadow-opacity: 0.35;
   shadow-radius: 10px;
   position: absolute;
-`;
+`
 
 const ClockPin = styled.View`
   background: ${colors.primary};
   border-radius: 6px;
   width: 12px;
   height: 12px;
-`;
+`
 
-const ClockWrap = props => (
-  <Container>
-    <ClockShadow />
-    <ClockShadowDark />
-    <ClockShadowWhite />
-    <ClockShadowColor />
-    <ClockDots source={dots} />
-    <ClockFace />
-    {props.children}
-    <ClockPin />
-  </Container>
-);
+const ClockWrap = props => {
+  const { children } = props
+  return (
+    <Container>
+      <ClockShadow />
+      <ClockShadowDark />
+      <ClockShadowWhite />
+      <ClockShadowColor />
+      <ClockDots source={dots} />
+      <ClockFace />
+      {children}
+      <ClockPin />
+    </Container>
+  )
+}
 
-export default ClockWrap;
+export default ClockWrap
